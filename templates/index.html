@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 챗봇</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="back-button">←</div>
+                <div class="chat-info">
+                    <div class="chat-title">AI 챗봇</div>
+                    <div class="chat-status">온라인</div>
+                </div>
+                <div class="header-actions">
+                    <div class="action-button">📞</div>
+                    <div class="action-button">📹</div>
+                    <div class="action-button">⋯</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        안녕하세요! 무엇을 도와드릴까요?
+                    </div>
+                    <div class="message-time">오후 4:52</div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <input type="text" id="messageInput" placeholder="메시지를 입력하세요..." maxlength="1000">
+                        <button id="sendButton" onclick="sendMessage()">📤</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
