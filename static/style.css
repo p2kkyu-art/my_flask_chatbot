@@ -139,7 +139,11 @@ button.icon-btn {
   flex-direction: column;
   gap: 10px;
   padding: 14px 12px 16px;
-  background: #b2c7d9;
+  background-color: #7eb6e8;
+  background-image: url("chat-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .chat::-webkit-scrollbar {
@@ -198,6 +202,7 @@ button.icon-btn {
   color: #191919;
   font-size: 12px;
   line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .bubble-row {
@@ -233,10 +238,11 @@ button.icon-btn {
 
 .time {
   flex: 0 0 auto;
-  color: rgba(0, 0, 0, 0.45);
+  color: #191919;
   font-size: 11px;
   line-height: 1.2;
   font-style: normal;
+  text-shadow: 0 0 3px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.95);
 }
 
 .composer {
@@ -244,9 +250,20 @@ button.icon-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+  padding: 8px 10px;
   background: #ffffff;
   border-top: 1px solid #ececec;
+}
+
+.copyright {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 12px calc(8px + env(safe-area-inset-bottom));
+  background: #ffffff;
+  color: #767676;
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .plus {
